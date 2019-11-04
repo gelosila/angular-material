@@ -1,0 +1,41 @@
+<mat-sidenav-container>
+    <mat-sidenav #sideNav [(mode)]="sideNavMode" [(opened)]="hasOpen" style="overflow:hidden;">
+        <mat-toolbar class="sidenav-header">  
+            <div>
+                Angular Material Admin
+                <div class="header-divider"></div>
+            </div> 
+        </mat-toolbar>
+        <mat-grid-list cols="1" class="sidenav-body">
+            <mat-nav-list style="overflow:auto;">
+                <a mat-list-item active>
+                    <mat-icon mat-list-icon>dashboard</mat-icon>
+                    <span matLine class="active">Dashboard</span>
+                </a>
+                <a mat-list-item>
+                    <mat-icon mat-list-icon>dashboard</mat-icon>
+                    <span matLine>Dashboard</span>
+                </a>
+                <a mat-list-item>
+                    <mat-icon mat-list-icon>dashboard</mat-icon>
+                    <span matLine>Dashboard</span>
+                </a>
+            </mat-nav-list>
+        </mat-grid-list>
+        <mat-toolbar class="sidenav-footer">  
+            <div>
+               <span class="mat-body-1">Powered by Angular Material</span>
+            </div>
+        </mat-toolbar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+            <app-header [opened]="sideNav" ></app-header>
+            <mat-grid-list cols="1" rowHeight="500px" class="main-content">
+                <mat-card>Simple card</mat-card>
+                <mat-toolbar class="main-footer">  
+                    <span class="mat-body-2">© Mark Angelo Sila</span>
+                    <span class="mat-body-2">Powered by <a href="https://material.angular.io/" target="_blank">Angular Material</a></span>
+                </mat-toolbar>
+            </mat-grid-list>
+    </mat-sidenav-content>
+</mat-sidenav-container>
